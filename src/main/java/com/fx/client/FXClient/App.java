@@ -17,7 +17,10 @@ public class App
     {
   	  try {
 
-  		URL url = new URL("http://localhost:8080/FXRestfulServer/data?type=spot&style");
+  		String type = "spot";
+  		String style = "";
+		    
+  		URL url = new URL("http://localhost:8080/FXRestfulServer/data?type="+type+"&style="+style);
   		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
   		conn.setRequestMethod("GET");
   		conn.setRequestProperty("Accept", "application/json");
